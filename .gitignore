@@ -8,5 +8,6 @@ pnpm-lock.yaml
 .idea
 
 /.pnpm-store/
+.__mf__temp
 docker-compose.override.yml
 .env

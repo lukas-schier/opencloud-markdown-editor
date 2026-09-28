@@ -3,7 +3,6 @@ import {
   AppMenuItemExtension,
   AppWrapperRoute,
   defineWebApplication,
-  useOpenEmptyEditor,
   useUserStore
 } from '@opencloud-eu/web-pkg'
 import { computed } from 'vue'
@@ -16,7 +15,6 @@ export default defineWebApplication({
   setup({ applicationConfig }) {
     const { $gettext } = useGettext()
     const userStore = useUserStore()
-    const { openEmptyEditor } = useOpenEmptyEditor()
 
     const appId = 'markdown-editor'
 
@@ -71,7 +69,6 @@ export default defineWebApplication({
           icon: appInfo.icon,
           priority: 10,
           path: urlJoin(appInfo.id),
-          handler: () => openEmptyEditor(appInfo.id, appInfo.defaultExtension)
         })
       }
 
